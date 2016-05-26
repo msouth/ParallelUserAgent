@@ -1,3 +1,6 @@
+t.b.d.
+ o Fix HTTPS support with newer LWP versions
+
 Mon Feb 18 2013 Michael South <msouth@cpan.org>
  o CPAN Release 2.61
 
