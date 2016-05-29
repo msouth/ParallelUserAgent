@@ -12,19 +12,14 @@ WriteMakefile(
     'LICENSE'      => 'perl',
     'AUTHOR'       => 'Marc Langheinrich <marclang@cpan.org>, Mike South (maintainer) <msouth@cpan.org>',
     #
-    # automated testing on 5.16.2 gave errors at make test; not able to find
-    # LWP::Protocol::http10.  Repeated a reduced version of the
-    # test with https and it needed IO::Socket::SSL and LWP::Protocol::https10.  
-    # 
-    # I don't know any of the actual
-    # required version numbers here.  This is a start on 
-    # getting the problem fixed, though.
+    # Not 100% sure what is needed here--I'm stripping out 
+    # the old http protocol ones though because a recent change should remove
+    # the dependency.  Passes tests; if you have problems after this change,
+    # please submit a failing test.
     #
     'PREREQ_PM' => {
         'LWP'                    => 5.64,
-        'LWP::Protocol::http10'  => 0,
         'IO::Socket::SSL'        => 0,
-        'LWP::Protocol::https10' => 0,
     },
 );
 
