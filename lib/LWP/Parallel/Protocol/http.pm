@@ -17,8 +17,8 @@ use Carp ();
 use vars qw(@ISA @EXTRA_SOCK_OPTS);
 
 require LWP::Parallel::Protocol;
-require LWP::Protocol::http10; # until i figure out gisle's http1.1 stuff!
-@ISA = qw(LWP::Parallel::Protocol LWP::Protocol::http10);
+require LWP::Protocol::http; # until i figure out gisle's http1.1 stuff!
+@ISA = qw(LWP::Parallel::Protocol LWP::Protocol::http);
 
 my $CRLF         = "\015\012";     # how lines should be terminated;
 				   # "\r\n" is not correct on all systems, for

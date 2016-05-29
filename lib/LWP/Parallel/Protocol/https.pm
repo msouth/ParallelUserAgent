@@ -23,7 +23,11 @@ if ($IO::Socket::SSL::VERSION) {
 use vars qw(@ISA);
 
 require LWP::Parallel::Protocol::http;
-require LWP::Protocol::https10;
-@ISA=qw(LWP::Protocol::https10 LWP::Parallel::Protocol::http);
+require LWP::Protocol::https;
+@ISA=qw(LWP::Protocol::https LWP::Parallel::Protocol::http);
+
+package LWP::Parallel::Protocol::https::Socket;
+
+our @ISA = qw(LWP::Protocol::https::Socket);
 
 1;
