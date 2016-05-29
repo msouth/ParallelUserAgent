@@ -21,6 +21,4 @@ no_index:
 requires:
   IO::Socket::SSL: 0
   LWP: 5.64
-  LWP::Protocol::http10: 0
-  LWP::Protocol::https10: 0
-version: 2.61
+version: 2.62
